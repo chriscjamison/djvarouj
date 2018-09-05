@@ -1,0 +1,92 @@
+/* ******* ******* ******* ******* ******* ******* ******* ******* *******
+   main.css
+     + The stylesheet which contains the stying data for the index page
+   ******* ******* ******* ******* ******* ******* ******* ******* ******* */
+
+
+/* 
+  Sets the logo, navigation, and the SECTION holding the background images to 
+   to a value of 'absolute' for the property, 'position'.
+*/
+#img-splash-logo, 
+nav, 
+#section-bkgrnd {
+  position: absolute;
+}
+
+/* 
+  The content is places one 'level' above the background images by setting the 
+  'z-index' of the content to a value of '2'.
+*/
+section, 
+#img-splash-logo, 
+nav {
+  z-index: 2;
+}
+
+/* 
+  The links within the main navigation are setup as individual 'blocks', given 
+  a bright green color, and set to use the typeface, 'Rift Soft'.
+*/
+nav > a {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: "rift-soft";
+  text-decoration: underline;
+  color: #69fb9f;
+}
+
+/* 
+  The link which corresponds with the section of content the visitor is viewing 
+  is set to a bolder font weight and the underline is removed.
+*/
+.current_section {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+     
+/* 
+  The link within the main navigation which points the visitor to the Facebook page 
+  is set to a width and height which matches the Facebook logo sprite. This link 
+  will be offset below the 'nav links'. Also, the link is set to contain 
+  a white Facebook logo. The logo is contained withing a CSS sprite.
+*/
+#a-nav-facebook {
+  width: 2.43rem;
+  height: 2.43rem;
+  margin-top: 1.5rem;
+  background-image: url('/assets/img/content/facebook.png');
+  background-position: -72px 0;
+}
+
+/* 
+  The SECTION which contains the background images is set to take up the total 
+  width and height of the BODY.
+*/
+#section-bkgrnd {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 1920px)	{
+  #img-splash-logo {
+    top: 6rem;
+    left: 23rem;
+  }
+  
+  nav {
+    top: 12rem;
+    right: 23rem;
+  }
+
+  nav > a { 
+    font-size: 2rem;
+  }
+
+  #section-bkgrnd img {
+    width: 100%;
+    height: auto;
+  }
+}
