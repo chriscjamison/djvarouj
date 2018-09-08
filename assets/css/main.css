@@ -302,6 +302,66 @@ nav > a,
 
 
 /* **************************** 
+      LAPTOP - 1600 x 900
+   *************************** */
+
+
+@media (max-width: 1600px)  {
+ 
+  /* ---- GENERAL ELEMENTS ---- */
+  section {
+    width: 72rem;
+    height: 40.63rem;
+    margin: 0 14rem;
+  } 
+
+  p {
+    line-height: 2;
+  }
+
+  
+  /* ---- SPLASH SECTION ---- */
+
+  #section-splash {
+    height: 45.88rem;
+  }
+
+
+  /* ---- BACKGROUND IMAGES SECTION ---- */
+
+  #section-about, 
+  #img-bkgrnd-2 {
+    height: 71rem !important;
+  }
+
+  #section-see, 
+  #img-bkgrnd-3 {
+    height: 54.5rem !important;
+  }
+
+  #section-hire, 
+  #img-bkgrnd-5 {
+    height: 51rem !important;
+  }
+
+  #section-contact, 
+  #img-bkgrnd-6 {
+    height: 46rem !important;
+  }
+
+
+  /* ---- SEE DJ VAROUJ ---- */
+
+  #section-see > video, 
+  #hire-content, 
+  .hire-content-ctgry img, 
+  .hire-content-ctgry p {
+    width: 43rem;
+  }
+}
+
+
+/* **************************** 
       LAPTOP - 1366 x 768
    *************************** */
 
@@ -341,12 +401,12 @@ nav > a,
 
   #section-see, 
   #img-bkgrnd-3 {
-    height: 44.06rem !important;
+    height: 45.06rem !important;
   }
 
   #section-hire, 
   #img-bkgrnd-5 {
-    height: 41.63rem !important;
+    height: 43.5rem !important;
   }
 
   #section-contact, 
@@ -369,7 +429,8 @@ nav > a,
 
   /* ---- ABOUT DJ VAROUJ ---- */
 
-  #section-about > h1 {
+  #section-about > h1, 
+  #section-contact > h1 {
     margin-bottom: 3rem;
   }
 
@@ -396,7 +457,7 @@ nav > a,
   #section-see > p, 
   .hire-content-ctgry p {
     width: 32rem;
-    margin: 2rem auto;
+    margin: 0.75em auto;
   }
 }
 
