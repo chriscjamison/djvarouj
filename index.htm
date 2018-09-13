@@ -14,22 +14,24 @@
   </head>
   <body>
 <!-- 
+  Main navigation
+-->
+    <a href="javascript:showMenu();" title="Menu" class="not_visible" id="a-nav-menu"></a>
+    <nav class="visible">
+      <a href="#home" title="Home" class="current_section" id="a-nav-home">Home</a>
+      <a href="#about" title="About" id="a-nav-about">About</a>
+      <a href="#see" title="See" id="a-nav-see">See</a>
+      <a href="#hear" title="Hear" id="a-nav-hear">Hear</a>
+      <a href="#hire" title="Hire" id="a-nav-hire">Hire</a>
+      <a href="#contact" title="Contact" id="a-nav-contact">Contact</a>
+      <a href="http://facebook.com/DJVAROUJ" target="_blank" title="Click here to visit DJ Varouj's Facebook page" id="a-nav-facebook"></a>
+    </nav>
+    <div class="not_visible" id="nav-bkgrnd">&nbsp;</div>
+<!-- 
   Section for landing screen 
 -->
     <section id="section-splash">
-      <img src="assets/img/logo/logo.png" width="280" height="83" alt="Welcome to the homepage of DJ Varouj" id="img-splash-logo" />
-<!-- 
-  Main navigation
--->
-      <nav>
-        <a href="#home" title="Home" class="current_section" id="a-nav-home">Home</a>
-        <a href="#about" title="About" id="a-nav-about">About</a>
-        <a href="#see" title="See" id="a-nav-see">See</a>
-        <a href="#hear" title="Hear" id="a-nav-hear">Hear</a>
-        <a href="#hire" title="Hire" id="a-nav-hire">Hire</a>
-        <a href="#contact" title="Contact" id="a-nav-contact">Contact</a>
-        <a href="http://facebook.com/DJVAROUJ" target="_blank" title="Click here to visit DJ Varouj's Facebook page" id="a-nav-facebook"></a>
-      </nav>
+      <img src="assets/img/logo/logo.png" alt="Welcome to the homepage of DJ Varouj" id="img-splash-logo" />
     </section>
 <!-- 
   Section for About
@@ -85,7 +87,7 @@
           id, ultrices ac metus.
         </p>
       </div>
-      <div class="hire-content-ctgry not_visible" id="hire-content-sweet-sixteen">
+      <div class="hire-content-ctgry not_visible" id="hire-content-sweet_sixteen">
         <img src="assets/img/content/sweet_sixteen.jpg" alt="DJ Varouj would like to perform at your sweet sixteen party." id="img-hire-content-sweet_sixteen" />
         <p>
           Donec volutpat iaculis velit, vitae luctus metus bibendum non. Sed purus urna, fringilla in ornare 
@@ -101,12 +103,26 @@
       </div>
     </div>
     <div id="hire-packages">
-      <h4>Packages</h4>
-      <div>
-        <span>$1,000</span>
+      <div class="hire-packages-ctgry visible" id="hire-packages-weddings">
+        <h4>Packages</h4>
+        <div>
+          <span>$1,000</span>
+        </div>
+        <div>
+          <span>$500</span>
+        </div>
       </div>
-      <div>
-        <span>$500</span>
+      <div class="hire-packages-ctgry not_visible" id="hire-packages-sweet_sixteen">
+        <h4>Packages</h4>
+        <div>
+          <span>$1,000</span>
+        </div>
+      </div>
+      <div class="hire-packages-ctgry not_visible" id="hire-packages-high_schools">
+        <h4>Packages</h4>
+        <div>
+          <span>$500</span>
+        </div>
       </div>
     </div>
   </section>
@@ -127,7 +143,7 @@
 <!-- 
   Section which holds the background images.
 -->
-    <section id="section-bkgrnd">    
+    <section id="section-bkgrnd">
       <img src="assets/img/bkgrnd/1.jpg" id="img-bkgrnd-1" />
       <img src="assets/img/bkgrnd/2.jpg" id="img-bkgrnd-2" />
       <img src="assets/img/bkgrnd/3.jpg" id="img-bkgrnd-3" />
@@ -140,6 +156,7 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="assets/js/popper.min.js"></script>

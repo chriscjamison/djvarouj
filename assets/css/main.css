@@ -3,17 +3,26 @@
      + The stylesheet which contains the stying data for the index page
    ******* ******* ******* ******* ******* ******* ******* ******* ******* */
 
-
 /* 
-  Sets the logo, navigation, and the SECTION holding the background images to 
+  Sets the logo and the SECTION holding the background images to 
    to a value of 'absolute' for the property, 'position'.
 */
 #img-splash-logo, 
-nav, 
 #section-bkgrnd {
   position: absolute;
 }
 
+/* 
+  Sets the main navigation icon and links to sit at the same vertical 
+  position within the browser window regardless of the viewed content.
+*/
+#a-nav-menu, 
+nav {
+  position: fixed;
+  z-index: 2;
+}
+
+#a-nav-menu, 
 nav > a, 
 #hire-links > a, 
 #a-contact-facebook {
@@ -23,13 +32,13 @@ nav > a,
 h1, 
 h4, 
 p, 
-#hire-packages > div > span {
+.hire-packages-ctgry > div > span {
   font-family: "casus";
 }
 
 h1, 
 h4, 
-#hire-packages > div > span {
+.hire-packages-ctgry > div > span {
   color: #fff;
 }
 
@@ -78,6 +87,14 @@ nav {
   border: 1px solid #ffb86b;
 }
 
+.visible {
+  display: block !important;
+}
+
+.not_visible {
+  display: none !important;
+}
+
 section {
   position: relative;
   width: 100%;
@@ -95,6 +112,12 @@ section {
   z-index: -1;
 }
 
+#a-nav-menu {
+  width: 3.12rem;
+  height: 3.12rem;
+  background-image: url('/assets/img/nav/main_nav.png')
+}
+
 nav {
   width: 5.93rem;
   height: auto;
@@ -105,6 +128,7 @@ nav {
   The links within the main navigation are setup as individual 'blocks', given 
   a bright green color, and set to use the typeface, 'Rift Soft'.
 */
+#a-nav-menu, 
 nav > a, 
 #hire-links > a, 
 #a-contact-facebook {
@@ -134,8 +158,12 @@ nav > a,
   width: 2.43rem;
   height: 2.43rem;
   margin-top: 1.5rem;
-  background-image: url('/assets/img/content/facebook.png');
-  background-position: -72px 0;
+  background-image: url('/assets/img/nav/facebook.png');
+  background-position: -144px 0;
+}
+
+#a-nav-facebook:hover {
+  background-position: -183px 0;
 }
 
 #img-about-photo {
@@ -163,15 +191,8 @@ nav > a,
   margin-left: 1.63rem;
 }
 
-.visible {
-  display: block;
-}
-
-.not_visible {
-  display: none;
-}
-
 #hire-links {
+  width: 10rem;
   margin-left: 1.63rem;
 }
 
@@ -184,14 +205,14 @@ nav > a,
   height: auto;
 }
 
-#hire-packages div {
+.hire-packages-ctgry div {
   width: 7.5rem;
   height: 4.69rem;
   margin-bottom: 1.5rem;
   background-color: #05b6fa;
 }
 
-#hire-packages > div > span {
+.hire-packages-ctgry > div > span {
   margin: 0 auto;
   display: block;
   font-size: 1.25rem;
@@ -206,7 +227,11 @@ nav > a,
   width: 4.5rem;
   height: 4.5rem;
   display: block;
-  background-image: url('/assets/img/content/facebook.png');
+  background-image: url('/assets/img/nav/facebook.png');
+}
+
+#a-contact-img-facebook:hover {
+  background-position: -72px 0;
 }
 
 #a-contact-facebook {
@@ -232,20 +257,32 @@ nav > a,
   }
 
 
-  /* ---- SPLASH SECTION ---- */
-
-  #img-splash-logo {
-    top: 6rem;
-  }
+  /* ---- MAIN NAVIGATION ---- */
   
-  nav {
-    top: 12rem;
+  #a-nav-menu {
+    top: 15.15rem;
+    right: 15rem;
   }
 
+  nav {
+    top: 14.5rem;
+    right: 23rem;
+  }
+
+  #a-nav-menu, 
   nav > a, 
   #hire-links > a, 
   #a-contact-facebook { 
     font-size: 2rem;
+  }
+
+
+  /* ---- SPLASH SECTION ---- */
+
+  #img-splash-logo {
+    width: 51.56rem;
+    height: auto;
+    top: 6rem;
   }
   
 
@@ -326,6 +363,10 @@ nav > a,
     height: 45.88rem;
   }
 
+  #img-splash-logo {
+    width: 46.75rem;
+  }
+
 
   /* ---- BACKGROUND IMAGES SECTION ---- */
 
@@ -385,12 +426,29 @@ nav > a,
   }
 
 
+  /* ---- MAIN NAVIGATION ---- */
+
+  nav {
+    top: 13.75rem;
+    right: 7rem;
+  }
+
+  #a-nav-menu {
+    top: 14.3rem;
+    right: 2.2rem;
+  }
+
+
   /* ---- SPLASH SECTION ---- */
 
   #section-splash {
     height: 38.43rem;
   }
 
+  #img-splash-logo {
+    width: 46.87rem;
+    height: auto;
+  }
 
   /* ---- BACKGROUND IMAGES SECTION ---- */
 
@@ -415,6 +473,8 @@ nav > a,
   }
 
   /* ---- MAIN NAVIGATION ---- */
+
+  #a-nav-menu, 
   nav > a, 
   #hire-links > a, 
   #a-contact-facebook {
@@ -485,6 +545,17 @@ nav > a,
     margin: 2rem 1.63rem;
   }
 
+   /* ---- MAIN NAVIGATION ---- */
+
+   #a-nav-menu {
+    top: 6.86rem;
+    right: 1rem;
+  }
+  
+  nav {
+    top: 6.25rem;
+    right: 4.25rem;
+  }
 
   /* ---- BACKGROUND IMAGES SECTION ---- */
 
@@ -508,8 +579,8 @@ nav > a,
 
   /* ---- SPLASH SECTION ---- */
 
-  nav {
-    top: 6rem;
+  #img-splash-logo {
+    width: 26.75rem;
   }
 
 
@@ -528,6 +599,13 @@ nav > a,
   .hire-content-ctgry img, 
   .hire-content-ctgry p {
     width: 31rem;
+  }
+
+
+  /* ---- HIRE DJ VAROUJ ---- */
+
+  #hire-links {
+    width: 9rem;
   }
 }
 
@@ -549,6 +627,25 @@ nav > a,
   p {
     font-size: 1.25rem !important;
   }
+
+
+  /* ---- MAIN NAVIGATION ---- */
+
+  #a-nav-menu {
+    top: 6.6rem;
+    right: 4.75rem;
+  }
+  
+  nav {
+    top: 6.25rem;
+    right: 3.3rem;
+    text-align: center;
+  }
+
+  #a-nav-facebook {
+    margin-left: 1.75rem;
+  }
+
   
   /* ---- BACKGROUND IMAGES SECTION ---- */
 
@@ -562,7 +659,7 @@ nav > a,
 
   #section-about, 
   #img-bkgrnd-2 {
-    height: 104.75rem !important;
+    height: 102rem !important;
   }
 
   #section-see, 
@@ -643,6 +740,44 @@ nav > a,
   }
   
 
+  /* ---- MAIN NAVIGATION ---- */
+
+  #a-nav-menu {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    padding: 1rem;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    border-top: 2px solid #69fb9f;
+    background-color: #373a36;
+    background-image: none;
+    text-align: center;
+  }
+
+  nav {
+    top: 8rem;
+    left: 9.75rem;
+  }
+
+  nav > a {
+    text-align: center;
+  }
+
+  #a-nav-facebook {
+    margin-left: 1.75rem;
+  }
+
+  #nav-bkgrnd {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #373a36;
+    opacity: 0.9;
+    z-index: 1;
+  }
+
   /* ---- BACKGROUND IMAGES SECTION ---- */
 
   #section-splash {
@@ -670,28 +805,16 @@ nav > a,
   
   #section-contact, 
   #img-bkgrnd-6 {
-    height: 22.5rem !important;
+    height: 28rem !important;
   }
 
 
   /* ---- SPLASH SECTION ---- */
 
   #img-splash-logo {
+    width: 17.5rem;
     top: 2rem;
     left: 2rem;
-  }
-
-  nav {
-    top: 8rem;
-    left: 7.75rem;
-  }
-
-  nav > a {
-    text-align: center;
-  }
-
-  #a-nav-facebook {
-    margin-left: 1.75rem;
   }
 
 
@@ -747,7 +870,7 @@ nav > a,
 
 
 /* **************************** 
-      IPHONE 6 - 414 x 736
+      IPHONE 6 - 360 x 736
    *************************** */
 
 
@@ -759,8 +882,8 @@ nav > a,
     height: 28.56rem;
     margin: 0 1rem;
   }
-  
 
+  
   /* ---- BACKGROUND IMAGES SECTION ---- */
 
   #section-splash {
@@ -854,7 +977,7 @@ nav > a,
   }
 
   nav {
-    left: 7.5rem;
+    left: 8.5rem;
   }
 
 
@@ -887,7 +1010,7 @@ nav > a,
    *************************** */
 
 
-@media (max-width: 360px)  {
+@media (max-width: 320px)  {
   
   /* ---- GENERAL ELEMENTS ---- */
   section {
@@ -933,9 +1056,10 @@ nav > a,
   }
 
   nav {
-    left: 6.1rem;
+    left: 7rem;
   }
 
+  #a-nav-menu, 
   nav > a, 
   #hire-links > a, 
   #a-contact-facebook { 
