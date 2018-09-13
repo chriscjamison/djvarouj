@@ -118,7 +118,7 @@ function showMenu() {
       }
 
       // The menu icon link is hidden by removing the reference
-      // to the CSS class, 'visible' and adding the class, 'not_visible'.
+      // to the CSS class, 'visible', and adding the class, 'not_visible'.
       $(menu_link_icon_element).removeClass("visible");
       $(menu_link_icon_element).addClass("not_visible");
 
@@ -126,9 +126,15 @@ function showMenu() {
       // to the CSS class, 'not_visible' and adding the class, 'visible'.
       $(menu_links_element).removeClass("not_visible");
       $(menu_links_element).addClass("visible");
+    } else {
+      // The menu icon link is hidden by removing the reference
+      // to the CSS class, 'visible', and adding the class, 'not_visible'.
+      $(menu_link_icon_element).removeClass("visible");
+      $(menu_link_icon_element).addClass("not_visible");
     }
   } else {
     if (menu_visibility_state === true) {
+console.log("true");
       // If the width of the window is equal to or less than 414, the main navigation menu is placed 
       // at the bottom of the browser.
       if (window_width <= 414) {
@@ -148,7 +154,7 @@ function showMenu() {
         $(menu_link_icon_element).addClass("visible");
 
         // The main navigation is hidden by removing the references 
-        // to the CSS class, 'visible' and adding the class, 'not_visible'.
+        // to the CSS class, 'visible', and adding the class, 'not_visible'.
         $(menu_links_element).removeClass("visible");
         $(menu_links_element).addClass("not_visible");
       }
@@ -170,12 +176,29 @@ function showMenu() {
         menu_link_css = {
           backgroundPosition: "-50px 0px"
         };
+
+        // Initializes a Boolean which is set to, 'true', if the main menu icon is visible.
+        var is_menu_link_icon_visible;
+
+        // The value, 'false', is passed on to prevent a computing error.
+        is_menu_link_icon_visible = false;
+
+        // The value, 'true', is passed on if the main menu icon is visible.
+        is_menu_link_icon_visible = $(menu_link_icon_element).hasClass("visible");
+
+        // If the main menu icon is not visible, it is made visible.
+        if (is_menu_link_icon_visible === false)  {
+          // The main menu icon is made visible by removing the CSS class, 'not_visible', 
+          // and adding the class, 'visible'.
+          $(menu_link_icon_element).removeClass("not_visible");
+          $(menu_link_icon_element).addClass("visible");
+        }
         
         // The link state of the main menu icon is shifted.
         $(menu_link_icon_element).css(menu_link_css);
 
         // The main navigation is hidden by removing the references 
-        // to the CSS class, 'visible' and adding the class, 'not_visible'.
+        // to the CSS class, 'visible', and adding the class, 'not_visible'.
         $(menu_links_element).removeClass("visible");
         $(menu_links_element).addClass("not_visible");
       } else if (window_width <= 414) {
@@ -185,12 +208,12 @@ function showMenu() {
         $(nav_bkgrnd_element).addClass("not_visible");
         
         // The main navigation is hidden by removing the references 
-        // to the CSS class, 'visible' and adding the class, 'not_visible'.
+        // to the CSS class, 'visible', and adding the class, 'not_visible'.
         $(menu_links_element).removeClass("visible");
         $(menu_links_element).addClass("not_visible");
       } else {
         // The main navigation is hidden by removing the references 
-        // to the CSS class, 'visible' and adding the class, 'not_visible'.
+        // to the CSS class, 'visible', and adding the class, 'not_visible'.
         $(menu_links_element).removeClass("visible");
         $(menu_links_element).addClass("not_visible");
 
@@ -200,6 +223,7 @@ function showMenu() {
         $(menu_link_icon_element).addClass("visible");
       } 
     } else {
+console.log("false");
       // The value of the CSS property, 'background-position', is passed on.
       background_position_value = $(menu_link_icon_element).css("backgroundPosition");
       
@@ -445,10 +469,15 @@ $(document).ready(
                 * The value, '250', refers to the amount of milliseconds of 
                 * a delay until the underline is added to the link.            */
 
-        setTimeout(
-          function () {
-            $(link_element).addClass("current_section");
-          }, 150);
+        if (all_links_selector === "nav > a") {
+          $(link_element).addClass("current_section");
+          setTimeout(
+            function () {
+              showMenu();
+            }, 500);
+        } else {
+          $(link_element).addClass("current_section");
+        }
       }
     );
 
@@ -744,7 +773,7 @@ $(document).ready(
         hire_content_elements = $(hire_content_selector);
 
         // The content is hidden by removing the references 
-        // to the CSS class, 'visible' and adding the class, 'not_visible'.
+        // to the CSS class, 'visible', and adding the class, 'not_visible'.
         $(hire_content_elements).removeClass("visible");
         $(hire_content_elements).addClass("not_visible");
 
@@ -796,7 +825,7 @@ $(document).ready(
         // Passes on the result of dividing the height of the browser window by 5.
         menu_visible_range = Math.round(window_height / 5);
         
-        if (window_position === 0 || (window_position > menu_visible_range && window_position < window_height)) {
+        if (window_position === 0 || (window_position > menu_visible_range && window_position < (window_height - menu_visible_range))) {
           showMenu();
         } 
       }
