@@ -60,6 +60,7 @@ p {
   width: 60%;
   margin: 2rem 1rem;
   font-size: 1.7rem;
+  line-height: 2;
   color: #6fd4fa;
 }
 
@@ -293,16 +294,14 @@ nav > a,
     height: auto;
   }
   
-  #section-about {
-    height: 57.5rem;
+  #section-about, 
+  #img-bkgrnd-2 {
+    height: 74rem !important;
   }
 
-  #section-see {
-    height: 56.59rem;
-  }
-
+  #section-see, 
   #img-bkgrnd-3 {
-    height: 56.56rem !important;
+    height: 59.5rem !important;
   }
   
   #section-hire, 
@@ -356,11 +355,30 @@ nav > a,
     line-height: 2;
   }
 
+
+  /* ---- MAIN NAVIGATION ---- */
+  
+  #a-nav-menu {
+    top: 14.5rem;
+    right: 5rem;
+  }
+
+  nav {
+    top: 13.75rem;
+    right: 12.75rem;
+  }
+
+  #a-nav-menu, 
+  nav > a, 
+  #hire-links > a, 
+  #a-contact-facebook { 
+    font-size: 2rem;
+  }
   
   /* ---- SPLASH SECTION ---- */
 
   #section-splash {
-    height: 45.88rem;
+    height: 45.25rem;
   }
 
   #img-splash-logo {
@@ -372,7 +390,7 @@ nav > a,
 
   #section-about, 
   #img-bkgrnd-2 {
-    height: 71rem !important;
+    height: 73.75rem !important;
   }
 
   #section-see, 
@@ -454,12 +472,12 @@ nav > a,
 
   #section-about, 
   #img-bkgrnd-2 {
-    height: 70.63rem !important;
+    height: 72.63rem !important;
   }
 
   #section-see, 
   #img-bkgrnd-3 {
-    height: 45.06rem !important;
+    height: 49.06rem !important;
   }
 
   #section-hire, 
@@ -469,7 +487,7 @@ nav > a,
 
   #section-contact, 
   #img-bkgrnd-6 {
-    height: 34.5rem !important;
+    height: 37.5rem !important;
   }
 
   /* ---- MAIN NAVIGATION ---- */
@@ -563,8 +581,14 @@ nav > a,
     height: 28.56rem;
   }
 
-  #section-about, #img-bkgrnd-2 {
+  #section-about, 
+  #img-bkgrnd-2 {
     height: 89.5rem !important;
+  }
+
+  #section-see, 
+  #img-bkgrnd-3 {
+    height: 48rem !important;
   }
 
   #section-hire, 
@@ -574,7 +598,7 @@ nav > a,
   
   #section-contact, 
   #img-bkgrnd-6 {
-    height: 41.5rem !important;
+    height: 42rem !important;
   }
 
   /* ---- SPLASH SECTION ---- */
@@ -659,17 +683,22 @@ nav > a,
 
   #section-about, 
   #img-bkgrnd-2 {
-    height: 102rem !important;
+    height: 111rem !important;
   }
 
   #section-see, 
   #img-bkgrnd-3 {
-    height: 37.4rem !important;
+    height: 41rem !important;
   }
 
   #section-hire, 
   #img-bkgrnd-5 {
     height: 35rem !important;
+  }
+
+  #section-contact, 
+  #img-bkgrnd-6 {
+    height: 36.5rem !important;
   }
 
 
@@ -788,14 +817,17 @@ nav > a,
     height: 34.5rem !important;
   }
   
-  #section-about, 
+  #section-about {
+    height: 114rem !important;
+  }
+
   #img-bkgrnd-2 {
-    height: 112rem !important;
+    height: 113.8rem !important;
   }
 
   #section-see, 
   #img-bkgrnd-3 {
-    height: 38rem !important;
+    height: 41rem !important;
   }
 
   #section-hire, 
@@ -805,7 +837,7 @@ nav > a,
   
   #section-contact, 
   #img-bkgrnd-6 {
-    height: 28rem !important;
+    height: 40.5rem !important;
   }
 
 
@@ -892,7 +924,12 @@ nav > a,
   
   #section-about, 
   #img-bkgrnd-2 {
-    height: 110.25rem !important;
+    height: 116rem !important;
+  }
+
+  #section-see, 
+  #img-bkgrnd-3 {
+    height: 40rem !important;
   }
 
 
@@ -903,7 +940,7 @@ nav > a,
   }
 
   nav {
-    left: 7.5rem;
+    left: 8.75rem;
   }
 
 
@@ -953,12 +990,9 @@ nav > a,
     height: 115.25rem !important;
   }
 
-  #section-see { 
-    height: 36.7rem !important;
-  }
-
+  #section-see, 
   #img-bkgrnd-3 { 
-    height: 36.5rem !important;
+    height: 39.5rem !important;
   }
   
   #section-hire {
@@ -967,6 +1001,11 @@ nav > a,
 
   #img-bkgrnd-5 {
     height: 59rem !important;
+  }
+
+  #section-contact, 
+  #img-bkgrnd-6 {
+    height: 42.5rem !important;
   }
 
 
@@ -1036,17 +1075,21 @@ nav > a,
   
   #section-about, 
   #img-bkgrnd-2 {
-    height: 120.75rem !important;
+    height: 127rem !important;
   }
 
   #img-bkgrnd-3 { 
-    height: 36.3rem !important;
+    height: 40rem !important;
   }
   
   #section-hire {
     height: 58.6rem !important;
   } 
 
+  #section-contact, 
+  #img-bkgrnd-6 {
+    height: 44.5rem !important;
+  }
 
   
   /* ---- SPLASH SECTION ---- */
